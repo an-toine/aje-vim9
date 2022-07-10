@@ -1,9 +1,10 @@
 ---
 name: rpmbuild
 on:
+  workflow_dispatch: {}
   push:
     branches:
-      - master
+      - main
 jobs:
   build-scl-rpm:
     runs-on: ubuntu-latest
