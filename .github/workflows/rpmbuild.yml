@@ -144,7 +144,7 @@ jobs:
       - name: Find Vim version
         id: extract_version
         run: >-
-          VERSION=$(find . -type f -name "*vim-8*.rpm" | head -n 1 |
+          VERSION=$(find . -type f -name "*vim-9*.rpm" | head -n 1 |
           awk 'match($0,/.*vim-([0-9\.\-]+)/,m)
           {print substr(m[1],1,length(m[1])-1)}')
 
