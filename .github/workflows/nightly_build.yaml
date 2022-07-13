@@ -25,7 +25,7 @@ jobs:
           add: '.'
           author_name: Antoine Jouve
           author_email: ant.jouve@gmail.com
-          branch: master
+          branch: main
           cwd: '.'
           message: 'Nightly rebuild of last Vim tag'
           push: true
