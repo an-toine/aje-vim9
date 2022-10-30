@@ -56,7 +56,7 @@ def get_current_spec_version(spec_file):
     with open(spec_file, "r") as f:
         spec_content = f.read()
 
-    version_regex = re.compile(r"^Version: ?([0-9\.\-]+)$", re.MULTILINE)
+    version_regex = re.compile(r"^Version: ?([0-9a-z\.\-]+)$", re.MULTILINE)
     version = version_regex.search(spec_content)
 
     if version is None or version.group(1) is None:
