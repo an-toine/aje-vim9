@@ -90,7 +90,7 @@ def update_spec(version, spec, changelog):
     with open(spec, "r") as f:
         spec_content = f.read()
     logging.debug("Replacing version in spec file")
-    version_regex = re.compile(r"^(Version: ?)[0-9\.\-]+$", re.MULTILINE)
+    version_regex = re.compile(r"^(Version: ?)[0-9a-z\.\-]+$", re.MULTILINE)
     updated_spec = version_regex.sub(r"\g<1>{}".format(version), spec_content)
 
     logging.debug("Loading in memory file {}".format(changelog))
