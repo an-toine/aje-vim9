@@ -127,6 +127,9 @@ rm -f $RPM_BUILD_ROOT%{_datadir}/%{pkg_name}/vim%{scl_name_version}/tools/xcmdsr
 mkdir -p $RPM_BUILD_ROOT/%{_root_sysconfdir}/%{_scl_prefix}/%{scl}/etc
 %{__cp} $RPM_BUILD_ROOT/%{_datadir}/%{pkg_name}/vim%{scl_name_version}/vimrc_example.vim $RPM_BUILD_ROOT/%{_root_sysconfdir}/%{_scl_prefix}/%{scl}/etc/vimrc
 
+# Chmod editorconfig mkzip script
+chmod 755 $RPM_BUILD_ROOT%{_datadir}/%{pkg_name}/vim%{scl_name_version}/pack/dist/opt/editorconfig/mkzip.sh
+
 # Copy vimrc file when SCL is registered
 mkdir -p %{buildroot}%{?_scl_scripts}/register.d/
 cat <<EOF | tee %{buildroot}%{?_scl_scripts}/register.d/20.copy-vimrc
