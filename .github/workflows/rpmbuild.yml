@@ -111,7 +111,7 @@ jobs:
     steps:
       - name: Install cinc-auditor to run tests
         run: |
-          curl -L https://omnitruck.cinc.sh/install.sh | sudo bash -s -- -P cinc-auditor -v 4
+          curl -L https://omnitruck.cinc.sh/install.sh | bash -s -- -P cinc-auditor -v 4
       - name: Fetch SCL RPM
         uses: actions/download-artifact@v2
         with:
